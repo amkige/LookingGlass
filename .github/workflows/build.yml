@@ -11,6 +11,12 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Setup NuGet
+        uses: nuget/setup-nuget@v2
+
+      - name: Restore NuGet packages
+        run: nuget restore idd/LGIdd.sln
+
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
 
@@ -30,3 +36,4 @@ jobs:
         with:
           name: build-artifacts
           path: artifacts
+
