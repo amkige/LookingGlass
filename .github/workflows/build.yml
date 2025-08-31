@@ -25,15 +25,9 @@ jobs:
         env:
           Git: git
 
-      - name: Collect build outputs
-        run: |
-          mkdir artifacts
-          copy **\x64\Release\*.exe artifacts\
-          copy **\x64\Release\*.dll artifacts\ || echo "No DLLs found"
-
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path: artifacts
+          path: idd/x64/Release/LGIdd
 
