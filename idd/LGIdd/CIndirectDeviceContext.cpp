@@ -298,7 +298,7 @@ void CIndirectDeviceContext::SetResolution(int width, int height)
 {
   m_setMode.width     = width;
   m_setMode.height    = height;
-  m_setMode.refresh   = 120; //FIXME
+  m_setMode.refresh   = 165; //FIXME
   m_setMode.preferred = true;
   g_settings.SetExtraMode(m_setMode);
 
